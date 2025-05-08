@@ -1,0 +1,473 @@
+/* Base */
+body{
+  font-family: "Inter", sans-serif;
+  font-size: 1.25vw;
+  color: #F7F7FC;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0E0E0F;
+  background-size: 2.4vw 2.4vw;
+  background-image:
+    linear-gradient(to right, rgba(199, 214, 246, 0.2) 1px, transparent 1px),
+	linear-gradient(to bottom, rgba(199, 214, 246, 0.2) 1px, transparent 1px);
+}
+
+/* Typography */
+h1,h3,h4,h5{font-family: "Unbounded", sans-serif;}
+h1{font-size: 4.4vw; line-height: 4.6vw; letter-spacing: -0.1vw; margin: 0; padding: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);}
+.work h1{margin: 8.2vw 0 0.4vw 0;}
+.hero-container h1{max-width: 35vw;}
+sup{font-size: 0.7vw;}
+h2{font-size: 1.25vw;}
+h3{font-size: 2.6vw; line-height: 3.37vw; letter-spacing: -0.1vw;}
+p, h2{font-weight: 600; color: #F7F7FC; line-height: 1.6vw; letter-spacing: -0.01vw;}
+.hero-container p{color: #B9CCF5;}
+a, h2{
+  font-weight: 600;
+  text-decoration: none;
+  color: #B9CCF5;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.featured-container a{text-shadow: none; text-shadow: 1px 2px 20px rgba(0, 0, 0, 0.7);}
+span{color: #6456FB;}
+.featured-container h1{max-width: 49vw;}
+.featured-container p{max-width: 33vw; text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);}
+.work h2{margin: 0 0 2vw 7vw;}
+
+h5{
+  position: relative;
+  z-index: -1;
+  font-size: 16vw;
+  color: rgba(247, 247, 252, 0.2);
+  margin: 0;
+  line-height: 0;
+  padding: 0;
+  top: 3.7vw;
+}
+/* Buttons */
+.button{
+  background-color: transparent;
+  border: none;
+  color: #B9CCF5;
+  font-weight: 700;
+  padding: 0.6vw 2.4vw;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3.5vw;
+  border: #B9CCF5 solid 0.3vw;
+  font-family: "Inter", sans serif;
+  font-size: 1.25vw;
+  gap: 1vw;
+  margin: 0;
+  position: relative;
+  left: -0.1vw;
+  position: relative;
+  z-index: 1;
+  
+}
+.button:hover{transform: translateY(-3px); transition: ease-in 0.3s;}
+.button img{
+  height: 1.15vw;
+  width: 1.15vw;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  vertical-align: middle;
+  position: relative;
+  top: -0.3vw;
+}
+.featured-container .button img, .selected-container .button img, .foot .button img{rotate: -129deg; top: 0; filter: brightness(180%);}
+.case .button img{rotate: -129deg;}
+
+.featured-container .button, .selected-container .button, .foot .button{max-width: 14vw; height: 2.8vw; margin-top: 2.5vw; color: #F7F7FC;
+  border: #F7F7FC solid 0.3vw; box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.7);}
+.foot .button{box-shadow: none; font-weight: 600;}
+
+/* Nav */
+.nav-container{
+  top: 0;
+  left: 0;
+  padding-top: 1em;
+  width: 100%;
+  height: 4.1em;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6), rgba(0,0,0,0));
+  position: fixed;
+}
+.nav{display: flex; justify-content: space-between; width: 85%; margin: 1.1vw auto 0 auto;}
+.nav-container .nav img{height: 1.2vw; padding: 0; margin: 0; padding: 0; box-shadow:2px 2px 5px rgba(0, 0, 0, 0.7);}
+.nav-container .nav ul li img{height: 0.65vw; margin-left: 0.4vw; margin-top: 0.1vw;}
+.nav-container .nav .little{height: 0.53vw; margin-top: 0.55vw; margin-left: 0.35vw;}
+.logo{margin-left: -0.5vw; padding-right: 4.5vw;}
+.nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.nav li{display: flex; margin-right: 2vw;}
+
+/* Hero */
+.hero-container{
+  display: flex;
+  margin: 0 auto;
+  width: 85vw;
+  min-height: 45.7vw;
+  overflow: hidden;
+}
+.work .hero-container{
+  min-height: 1vw;
+  display: flex;
+  margin: 0 auto;
+  width: 85vw;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.left-hero-under, .right-hero-under{position: absolute; z-index: -2; height: 9.45vw; width: 30.2vw; top: 20.31vw;}
+.right-hero-under{right: 7vw; width: 33.55vw;}
+.left-column{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16.2vw;
+  width: 50%;
+}
+.right-column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-top: 16.2vw;
+  width: 50%;
+}
+.center-column{
+  position: absolute;
+  display: flex;
+  top: 8.9vh;
+  left: 30vw;
+  height: 52vw;
+  z-index: -2;
+}
+.row{display: flex;}
+.hero-container .left-column img{height: 2.2vw; margin-right: 1vw; margin-top: 1.45vw;}
+.hero-container .right-column img{height: 2.6vw; margin-top: 0.6vw; margin-right: 0.15vw;}
+.flicker{
+  animation: flickerAnimation 2s infinite;
+}
+@keyframes flickerAnimation {
+  0%, 33%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+.hero-container .right-column .row{height: 2.1vw; margin-top: 0.6vw; margin-bottom: 5.8vw;}
+.hero-container .left-column p{margin-top: 4.3vw; max-width: 29vw; line-height: 1.7vw;}
+.space-between{display: flex; justify-content: space-between;}
+
+/* Skills */
+.skills-container{
+  margin: 0.2vw auto 4.6vw 7vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.skills-container .skills{width: 85vw; padding: 1vw 0 0 0;}
+
+/* Featured */
+.featured-container{
+	display: flex;
+	align-items: center;
+	width: 100vw;
+	max-height: 100vh;
+	min-height: 50vw;
+	background-image: url('images/rogers-case-study-cover.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 115% auto;
+	object-fit: cover;
+	left: 0;
+}
+.featured-container .text-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 8vw;
+}
+
+/* Selected */
+.selected-container{display: flex;}
+.selected-container .col{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 46vw;
+}
+a:hover, .discover-container h1 a:hover{transform: translateY(-3px); transition: ease-in 0.3s;}
+.selected-container .text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7.1vw;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.selected-container .text-container h3{max-width: 100%; line-height: 3vw; margin: 0;}
+.selected-container .text-container p{max-width: 80%;}
+.selected-container .image1, .selected-container .image2, .selected-container .image3{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-attachment: fixed;
+}
+.selected-container .image1{background-image: url('images/tetley3-case-study.png');background-position: right center; background-size: 89%;}
+.selected-container .image2{background-image: url('images/waterloo-case-study.png');background-position: left top; background-size: cover; background-size: 90%;}
+.selected-container .image3{background-image: url('images/roomi-case-study.png'); background-size: auto 100%;}
+
+/* Discover */
+.discover-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85vw;
+  height: 100vh;
+}
+.discover-container h2{margin-top: 6.5vw;}
+.discover-container h1{
+  margin-top: 1vw; 
+  border-bottom: #6456FB solid 2px;
+  padding-bottom: 1vw;
+}
+.discover-container h1 a{margin-left: 2.95vw; color:#F7F7FC; display: inline-block;  transition: transform 0.3s ease-in;}
+.discover-container .first{margin-top: 2.5vw; border-top: #6456FB solid 2px; padding-top: 1.2vw;}
+
+/* About */
+.about-container{
+  display: flex;
+  margin: 3.4vw auto 0 auto;
+  width: 85vw;
+  min-height: 43vw;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Footer */
+.foot{width: 100vw; background-color: #6456FB;
+	padding: 4.3vw 0 4.3vw 0; margin: 2.2vh auto 0 auto;}
+.footer-container{
+  width: 85.55vw;
+  height: 100%;
+  margin: 0 auto;
+}
+.sitemap{display: flex;}
+.footer-container .text-col{
+  margin-top: 2vw;
+  margin-right: 5vw;
+}
+.foot a{text-shadow: none; font-weight: 500;}
+.foot h3{margin: 1.21vw 9.5vw 0 0;}
+.foot h4{opacity: 0.3; margin: 0;}
+.copyright{position: absolute; left: 7vw; padding-top: 0.65vw; font-weight: 700;}
+.foot .name{height: 13.5vw; position: absolute; top: 639.5vh; index: -1; margin: 0; padding: 0;}
+.face-card{height: 9.5vw; margin: 0 3vw 0 0;}
+.hr1{opacity: 0.3; margin-top: 4.3vw; padding: 0;}
+.hr2{opacity: 0.3; margin-top: 4.3vw;}
+.foot .row3{display: flex; align-items: center; justify-content: space-between;}
+.row3 .row{align-items: center;}
+.foot .row2{margin-right: 0.6vw; height: 1.7vw; margin-top: 0.3vw; filter: brightness(180%);}
+
+/* Work Gallery */
+.work-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+}
+.work .text-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 7vw;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
+  margin-top: 2%;
+  z-index: 2;
+}
+.work .selected-container .text-container h3{max-width: 100%; line-height: 3vw;}
+.text2{justify-content: flex-end;}
+.col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.right-col{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-position: right center; 
+  background-size: 50%;
+}
+.right-col .text-container h3, .right-col .text-container p{text-shadow: 1px 2px 20px rgba(0, 0, 0, 0.9);}
+
+.rogers-img, .amelia-img, .tetley-img, .roomi-img, .eve-img, .eye-img, .the-well-img, .photography-portfolio-img, .waterloo-img {
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  opacity: 1;
+}
+.left-col{background-position: left center; background-size: 50%;}
+.rogers-img { background-image: url('images/rogers2-case-study-cover.png'); background-size: 58%; 
+  background-color: #000;}
+.tetley-img { background-image: url('images/tetley3-case-study.png'); background-color: #00A6E1;}
+.roomi-img { background-image: url('images/roomi-case-study.png'); }
+.eve-img { background-image: url('images/eve-case-study.png'); background-color: #F29877;}
+.eye-img { background-image: url('images/eye2-case-study.png'); background-position: center center; background-size: 100%;}
+.the-well-img { background-image: url('images/the-well-case-study.png'); background-size: 50%; background-repeat: repeat;}
+.photography-portfolio-img { background-image: url('images/photography-portfolio.jpg'); background-size: 50%; background-position: right bottom;}
+.waterloo-img { background-image: url('images/waterloo2-case-study.png'); background-size: 90%; background-color: #F2C84B;}
+.amelia-img{background-image: url('images/amelia-case-study.png'); background-size: 100%; background-color: #101010;}
+.work .foot{margin-top: 0;}
+.overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0) 75%);
+  z-index: 0;
+  pointer-events: none;
+}
+.overlay-gradient3{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+.work .col {
+  position: relative;
+}
+.work h1{line-height: 3.5vw; border-bottom: #6456FB solid 0.3vw; max-width: 27.4vw;}
+
+/* Cases */
+.case .hero hr{
+  height: 0.25vw;    
+  background-color: #6456FB;
+  border: none;       
+  margin: 1.5vw 0;  
+}
+.case p{margin: 0.5vw 0 0 0; letter-spacing: 0vw;}
+.case .outline .col h2{margin-bottom: 0.5vw;}
+.case h1{margin: 2.3vw 0 1vw 0;}
+.case .hero, .case .toc, .case .section{
+  margin: 5.9vw auto 0 auto;
+  width: 85vw;
+}
+.case .section .right .case-button-container{display: flex; margin: 0.5vw 0 0 0;}
+.case .toc .little{margin: 0.5vw 0 0 0.6vw; padding: 0; transform: rotate(89deg); height: 1vw;}
+.case .section .right .button{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 12.2vw; height: 3vw;}
+.case .section .right .button .little{margin: 0.5vw 0 0 0; padding: 0; transform: rotate(130deg); height: 1vw;}
+.case h3{margin: 0; line-height: 2.7vw;}
+.case .contain{margin-top: 2.6vw;}
+.case .outline{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2vw;
+}
+.case .outline .col{
+  display: flex;
+  flex-direction: column;
+  max-width: 17vw;
+}
+.case .toc{margin-top: 3vw; display: flex;}
+.case .toc h2{margin: 0 2.5vw 0 0;}
+.case .section{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5vw;
+}
+.row{display: flex;}
+.case .row{justify-content: space-between;}
+.case .section p{margin: 0; max-width: 100%;}
+.case .section .right img{width: 73%; margin-top: 2.5vw;}
+.case .section .right .bigger{width: 100%;}
+.case .section .right .small{width: 50%;}
+.case .section .right .img-text{opacity: 0.5; color: #F7F7FC; text-align: center; margin: 1vw 0 0 0; max-width: 33vw;}
+.case .section .img-container{display: flex; align-items: center; flex-direction: column;}
+.case .section .left{
+  display: flex;
+  width: 30%;
+}
+.case .section .right .contributions{border: #B9CCF5 2px solid; padding: 2vw;}
+.case .section .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 58%; 
+}
+.case .section .right ol{margin: 0vw 0vw 0 0; font-weight: 600; color: #B9CCF5;}
+.rogers1, .rogers2, .rogers3, .waterloo1, .waterloo2, .waterloo3, .amelia1, .amelia2, .amelia3
+, .tetley1, .tetley2, .tetley3, .eve1, .eve2, .eye1, .eye2{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 100%; 
+  height: 38vh; 
+  margin-top: 0.6vw;
+}
+.case .section .right p{margin: 0 0 1.5vw 0;}
+.case .section .right h6{margin: 0 0 0.5vw 0; color: #B9CCF5; line-height: 1.8vw; font-size: 1.25vw;}
+.case span{color: #B9CCF5;}
+.img-container .frame{margin: 2.5vw 0 0 6.5vw;}
+.rogers1{background-image: url('images/rogers-banner.png');}
+.rogers2{background-image: url('images/rogers-banner2.png');}
+.rogers3{background-image: url('images/rogers-banner3.png'); margin-bottom: 2.5vw;}
+.waterloo1{background-image: url('images/waterloo-banner.png');}
+.waterloo2{background-image: url('images/waterloo-banner2.png');}
+.waterloo3{background-image: url('images/waterloo-banner3.png'); margin-bottom: 2.5vw;}
+.amelia1{background-image: url('images/amelia-banner.png'); background-size: 110%; background-position: right center;}
+.amelia2{background-image: url('images/amelia-banner2.jpg'); background-size: 103.8%; background-position: left center;}
+.amelia3{background-image: url('images/amelia-case-study.png'); margin-bottom: 2.5vw; background-size: 110%; background-position: left center;}
+
+.tetley1{background-image: url('images/tetley-banner.png');}
+.tetley2{background-image: url('images/tetley-banner2.png');}
+.tetley3{background-image: url('images/tetley-banner3.png'); margin-bottom: 2.5vw;}
+
+.eve1{background-image: url('images/eve-banner.png');}
+.eve2{background-image: url('images/eve-banner2.png');}
+
+.eye1{background-image: url('images/eye2-case-study.png'); background-position: right center;}
+.eye2{background-image: url('images/eye-banner2.png');}
+
+@media only screen and (max-width: 850px) {
+	.work .selected-container .col img, .featured-container, .selected-container .image1,
+	.selected-container .image2, .selected-container .image3
+	.rogers-img, .tetley-img, .roomi-img, .eve-img, .eye-img, 
+	.the-well-img, .photography-portfolio-img, .waterloo-img 
+	{background-attachment: scroll; background-size: 100%; background-position: center center;}
+	.selected-container .col{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      height:40vw;
+    }
+	.rogers-img{background-attachment: scroll; background-size: 100%;}
+	.selected-container .image2{background-size: auto 100%; background-position: left center;}
+}
